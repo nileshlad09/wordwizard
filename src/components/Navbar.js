@@ -7,7 +7,7 @@ const Navbar = (props) => {
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <h2 className="navbar-brand" >
-            {title}
+            {title} "sakd"
           </h2>
           <button
             className="navbar-toggler"
