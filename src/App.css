@@ -50,3 +50,8 @@
     box-shadow: 5px 10px 8px #888888;
     height: 500px;
 }
+
+.followme i{
+  font-size: 2rem;
+  color: white; 
+}

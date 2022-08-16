@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 const TextForm = (props) => {
-  const { mode } = props;
   const [text, setText] = useState("");
 
   const CTuppercase = () => {
@@ -78,6 +77,7 @@ const TextForm = (props) => {
             </div>
           </div>
         </div>
+      <p>Created By <a href="https://nileshlad09.github.io/portfolio-nilesh/" target="_blank">Nilesh</a></p>
       </div>
     </div>
   );
