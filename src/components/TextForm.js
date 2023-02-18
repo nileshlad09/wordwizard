@@ -28,6 +28,19 @@ const TextForm = (props) => {
     console.log(newText);
     setText(newText.join(" "));
   };
+  const [wordMap]= useState({});
+
+  function countRepeatedWords(sentence) {
+    let words = sentence.split(" ");
+  
+    for (let i = 0; i < words.length; i++) {
+      let currentWordCount = wordMap[words[i]];
+      let count = currentWordCount ? currentWordCount : 0;
+      wordMap[words[i]] = count + 1;
+    }
+    return wordMap;
+  }
+  console.log(countRepeatedWords(text));
 
   const onChange = (e) => {
     setText(e.target.value);
@@ -64,20 +77,20 @@ const TextForm = (props) => {
             </button>
             </div>
           </div>
-          <div className="col-lg-4 col-md-12 col-sm-12">
+          <div className="col-lg-4 col-md-12">
             <div
               className="text-summary "
             >
-              <h1>Your Text Summary</h1>
-              <p>Total words : {text.length ? text.split(" ").length : 0}</p>
-              <p>Total characters : {text.split("").length}</p>
-              <p>{0.008 * text.split(" ").length} minutes read</p>
+              <h3>Your Text Summary</h3>
+              <p>Total words : {text ? text.split(/\s+/).length : 0}</p>
+              <p>Total characters : {text.replaceAll(' ', '').length}</p>
+              <p>{(0.008 *  (text?text.replaceAll(' ', '').length:0)).toFixed(2)} minutes read</p>
               <h3>Preview</h3>
               <p>{text}</p>
             </div>
           </div>
         </div>
-      <p>Created By <a href="https://nileshlad09.github.io/portfolio-nilesh/" target="_blank">Nilesh</a></p>
+      <p className="createdBy">Created By <a href="https://nileshlad.vercel.app" target="_blank">Nilesh</a></p>
       </div>
     </div>
   );

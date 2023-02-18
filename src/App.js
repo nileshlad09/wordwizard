@@ -5,10 +5,9 @@ import TextForm from './components/TextForm';
 function App() {
   return (
     <>
-    
-     <Navbar title="TextAnalysis"/>   
-     <div className="wrap">
-     <TextForm />
+     <Navbar title="WordWizard"/>   
+      <div className="wrap">
+       <TextForm />
      </div>
      </>
   );

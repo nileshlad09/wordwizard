@@ -2,14 +2,13 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+body{
+    background: linear-gradient(109.6deg, rgb(255, 219, 47) 11.2%, rgb(244, 253, 0) 100.2%);
+}
+a{
+    text-decoration: none;
+}
 .wrap{
-    background: url(./img/background.jpg) no-repeat;
-    background-size: cover;
-    position: absolute;
-    bottom: 0;
-    top: 45px;
-    left: 0;
-    right: 0;
     color: white;
     padding-top: 40px;
 }
@@ -41,17 +40,27 @@
     color:white;
     font-size: 1.5rem;
 }
-
-
-
 .text-summary{
     background-color: #143d59;
     padding: 10px;
     box-shadow: 5px 10px 8px #888888;
-    height: 500px;
+    height: 450px;
+    margin-top: 20px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+.text-summary::-webkit-scrollbar {
+    display: none;
 }
 
+.text-summary{
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
 .followme i{
   font-size: 2rem;
   color: white; 
+}
+.createdBy{
+    margin-top: 10px;
 }
