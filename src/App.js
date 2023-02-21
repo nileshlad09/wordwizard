@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
+import Typing from './components/Typing';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
      <Navbar title="WordWizard"/>   
       <div className="wrap">
        <TextForm />
+       {/* <Typing /> */}
      </div>
      </>
   );
